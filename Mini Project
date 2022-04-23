@@ -1,0 +1,271 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int  Code_value;
+  float Radius,Length,Breadth,Height,Base,Side,Area,Circumference;
+  float Parameter_needed,Perimeter;
+ float Side1,Side2,Side3,LSA,Volume,Baseside1,Baseside2,Baseside3;
+    printf("CALCULATING FOR GEOMETRIC SHAPES\n\n");
+   
+    
+    printf("     Select the Geomtric Shape\n");
+    printf("Here:\n");
+
+    printf("1: Circle\n");
+    printf("2: Rectangle\n");
+    printf("3: Square\n");
+    printf("4: Triangle\n");
+    printf("5: Sphere\n");
+    printf("6: Cone\n");
+    printf("7: Cylinder\n");
+    printf("8: Triangular Prism\n");
+    printf("9: Cuboid\n");
+    printf("10:Cube\n");
+    printf("11: Hemisphere\n\n");
+
+    printf("Enter the Code_value\n");
+    scanf("%d",&Code_value);
+    switch(Code_value){
+
+        case 1:
+        printf("This is a circle!\n");
+        printf("Parameter_needed\n1.Area\n2.Circumference\n\nValue\n");
+        scanf("%f",&Parameter_needed);
+       
+        if (Parameter_needed==1.){
+           
+           
+        printf("Enter the Radius here:\n");
+        scanf("%f",&Radius);
+        
+        Area= 3.14*Radius*Radius;
+        printf("Area of Circle is:\n%0.2f sq.units",Area);}
+        else{
+            printf("Enter the Radius here:\n");
+            scanf("%f",&Radius);
+            Circumference=2*3.14*Radius;
+            printf("Circumference of the Circle is:\n%.2f units",Circumference);
+        }
+        break;
+        case 2:
+        printf("This is a Rectangle!\n");
+        printf("Parameter_needed\n1.Area\n2.Perimeter\n\nValue\n");
+        scanf("%f",&Parameter_needed);
+        if (Parameter_needed==1.){
+        printf("Enter Length and Breadth:\n");
+        scanf("%f %f",&Length,&Breadth);
+        Area= Length*Breadth;
+        printf("Area of Rectangle is:\n%0.2f sq.units",Area);}
+        else {
+            printf("Enter Length and Breadth:\n");
+            scanf("%f %f",&Length,&Breadth);
+            Perimeter= 2*(Length+Breadth);
+             printf("Perimeter of Rectangle is:\n%0.2f units",Perimeter);
+            }
+        break;
+        case 3:
+        printf("This is a Square!\n");
+        printf("Parameter_needed\n1.Area\n2.Perimeter\n\nValue\n");
+        scanf("%f",&Parameter_needed);
+        if (Parameter_needed==1.){
+        printf("Enter the value of Side:");
+        scanf("%f",&Side);
+        Area= Side*Side;
+        printf("Area of Square is:\n%0.2f sq.units",Area);}
+        else{
+            printf("Enter the value of Side:");
+            scanf("%f",&Side);
+            Perimeter=4*Side;
+            printf("Perimeter of Square is:\n%.2f units.",Perimeter);
+             }
+        break;
+        case 4:
+        printf("This is a Triangle!\n");
+         printf("Parameter_needed\n1.Area\n2.Perimeter\n\nValue\n");
+        scanf("%f",&Parameter_needed);
+        if (Parameter_needed==1.){
+        printf("Enter Base and Height:\n");
+        scanf("%f %f",&Base,&Height);
+        Area=0.5*Base*Height;
+        printf("Area of Triangle is:\n%0.2f sq.units",Area);}
+        else{
+            printf("Enter Side1,Side2,Side3:\n");
+            scanf("%f %f %f",&Side1,&Side2,&Side3);
+            Perimeter=Side1+Side2+Side3;
+            printf("Perimeter of Triangle is:\n%.2f units.",Perimeter);
+        }
+            
+        float LSA,Volume;
+        break;
+        case 5:
+        
+        //LSA=Lateral surface area
+        printf("This is sphere!\n");
+         printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");
+         scanf("%f",&Parameter_needed);
+         if(Parameter_needed==1.)
+         {
+              printf("Enter the Radius of sphere:\n");
+              scanf("%f",&Radius);
+              Area=3.14*Radius*Radius;
+              printf("Area of Sphere is:\n%0.2f sq.units",Area);
+             
+         }
+        else if(Parameter_needed==2)
+        {
+            printf("Enter the Radius of sphere:\n");
+            scanf("%f",&Radius);
+            LSA=4*3.14*Radius*Radius;
+            printf("Lateral surface area of Sphere is:\n%0.2f sq.units.",LSA );
+        }
+        else 
+        {
+                printf("Enter the Radius of sphere:\n");
+                scanf("%f",&Radius);
+                Volume=(3.14*pow(Radius,3)*4)/3;
+                printf("Volume of the Sphere is:\n%0.2f cubic units",Volume);
+        }
+        break;
+        case 6:
+        printf("This is a Cone!\n");
+         printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");
+          scanf("%f",&Parameter_needed);
+         if(Parameter_needed==1.) {
+          printf("Enter the Radius and Length:\n");
+         scanf("%f %f",&Radius,&Length);
+        Area=3.14*Radius*(Radius+Length);
+        printf("Area of cone is:\n%0.2f sq.units",Area);}
+        else if (Parameter_needed==2){
+             printf("Enter the Radius and Length:\n");
+            scanf("%f %f",&Radius,&Length);
+            LSA=3.14*Radius*Length;
+            printf("Lateral surface area of Cone is:\n%0.2f sq.units.",LSA ); }
+            else{
+                printf("Enter the Radius and Height:\n");
+                scanf("%f %f",&Radius,&Height);
+                Volume=(3.14*pow(Radius,2)*Height)/3;
+                printf("Volume of the Cone is:\n%0.2f cubic units",Volume);
+            }
+            break;
+        case 7:
+        printf("This is a Cylinder!\n");
+        printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");
+          scanf("%f",&Parameter_needed);
+         if(Parameter_needed==1.){ 
+        printf("Enter the Radius and Height:\n");
+        scanf("%f %f",&Radius,&Height);
+        Area=2*3.14*Radius*(Radius+Height);
+        printf("Area of Cylinder is:\n%.2f sq.units",Area);}
+          else if(Parameter_needed==2){ 
+             printf("Enter the Radius and Height:\n");
+        scanf("%f %f",&Radius,&Height);
+            LSA=2*3.14*Radius*Height;
+            printf("Lateral surface area of Cylinder is:\n%0.2f sq.units.",LSA );}
+          else{
+            printf("Enter the Radius and Height:\n");
+        scanf("%f %f",&Radius,&Height);
+            Volume=3.14*pow(Radius,2)*Height;
+            printf("Volume of the Cylinder is:\n%0.2f cubic units",Volume);
+          }
+            break;
+      float Baseside1,Baseside2,Baseside3;
+        case 8:
+        printf("This is a Triangular prism!\n");
+           printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");
+          scanf("%f",&Parameter_needed);
+         if(Parameter_needed==1.){
+        printf("Enter the Length,Breadth,Height and Side:\n");
+        scanf("%f %f %f %f",&Length,&Breadth,&Height,&Side);
+        Area=Breadth*Height+2*Length*Side+Length*Breadth;
+        printf("Area of Triangular Prism:\n%.2f sq.units",Area);}
+          else if (Parameter_needed==2){
+            printf("Baseside1,Baseside2,Baseside3 and Height");        scanf("%f%f%f%f",&Baseside1,&Baseside2,&Baseside3,&Height);
+           LSA=(Baseside1+Baseside2+Baseside3)*Height;
+           printf("Lateral surface area of Triangular Prism is:\n%0.2f sq.units.",LSA );} 
+          else {
+             printf("Baseside1,Baseside2 and Height");
+            scanf("%f %f %f",&Baseside1,&Baseside2,&Baseside3);
+            Volume=0.5*Baseside1*Baseside2*Height;
+            printf("Volume of the Triangular Prism is:\n%0.2f cubic units",Volume); 
+            }      
+        break;
+        case 9:
+        printf("This is a Cuboid!\n");
+          printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");
+          scanf("%f",&Parameter_needed);
+         if(Parameter_needed==1.){
+        printf("Enter the Length,Breadth and Height:\n");
+        scanf("%f %f %f",&Length,&Breadth,&Height);
+        Area=2*(Length*Height+Height*Breadth+Breadth*Length);
+        printf("Area of Cuboid:\n%.2f sq.units",Area);}
+          else if (Parameter_needed==2){
+           printf("Enter the Length,Breadth and Height:\n");
+            scanf("%f %f %f",&Length,&Breadth,&Height); 
+            LSA= 2*Height*(Length+Breadth);
+            printf("Lateral surface area of Cuboid :\n%0.2f sq.units.",LSA );
+          }
+          else {
+            printf("Enter the Length,Breadth and Height:\n");
+        scanf("%f %f %f",&Length,&Breadth,&Height);
+            Volume=Length*Breadth*Height;
+            printf("Volume of the Cuboid is:\n%0.2f cubic units",Volume);
+            }
+        break;
+        case 10:
+        printf("This is a Cube!\n");
+ printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");  
+          scanf("%f",&Parameter_needed);
+        if (Parameter_needed==1.)
+        {
+        printf("Enter the Side:\n");
+        scanf("%f",&Side);
+        Area=6*Side*Side;
+        printf("Area of Cube:\n%.2f sq.units",Area);
+          }
+          else if (Parameter_needed==2)
+        { 
+           printf("Enter the Side:\n");
+        scanf("%f",&Side);
+          LSA=4*pow(Side,2);
+           printf("Lateral surface area of Cube :\n%0.2f sq.units.",LSA );
+       }
+          else {
+     printf("Enter the Side:\n");
+        scanf("%f",&Side);
+    Volume=pow(Side,3);
+    printf("Volume of the Cube is:\n%0.2f cubic units",Volume);
+     }
+        
+          break;
+      case 11:
+        printf("This is a Hemisphere!\n");
+           printf("Parameter_needed\n1.Area\n2.Lateral surface area\n3.Volume \n\nValue\n");
+          scanf("%f",&Parameter_needed);
+        if(Parameter_needed==1.){
+       printf("Enter the Radius:\n");
+        scanf("%f",&Radius);
+        Area=3*3.14*Radius*Radius;
+        printf("Area of Hemisphere:\n%.2f sq.units",Area);}
+          else if (Parameter_needed==2)
+        {
+          
+          
+        printf("Enter the Radius:\n");
+        scanf("%f",&Radius);
+          LSA=2*3.14*Radius*Radius;
+          printf("Lateral surface area of Hemisphere :\n%0.2f sq.units.",LSA );
+          }
+        else { 
+          printf("Enter the Radius:\n");
+        scanf("%f",&Radius);
+            Volume=(2*3.14*pow(Radius,3))/3;
+             printf("Volume of the Hemisphere is:\n%0.2f cubic units",Volume);   
+          }
+        break;
+    default:
+        printf("Codevalue Doesn't exsists");
+    break;
+      
+        }
+  }
